@@ -5,6 +5,16 @@ var {todo} = require('../mongoose/mongoose.js');
 
 function todoController(app){
 
+    app.get('/', (req, res)=>{
+        todo.find({}, (err, mongoData)=>{
+            if(err){
+                console.log(err);
+            }
+            else{
+                res.render('todo.ejs', {data : mongoData});
+            }
+        })
+    })
     app.get('/todo', (req, res)=>{
         todo.find({}, (err, mongoData)=>{
             if(err){
