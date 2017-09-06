@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ratnani1996/todo-app-node#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "mongoose": "^4.11.0"
